@@ -26,3 +26,7 @@ This does the following
   is not related to the local repo
 * push the merged local master to the github repo
 
+Still didn't work after I edited a file, so had to run
+```bash
+git push --set-upstream origin master
+```
