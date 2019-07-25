@@ -18,7 +18,6 @@ class Game extends React.Component {
     // debug
     console.log("Clicked card " + id);
     this.state.allMemoryCards.forEach( (card) => {
-      console.log("Card " + card.id + " visited " + card.visited);
     });
     // memory cards always appear in a random order, so have to run through them all
     // to find out if this card was already visited
@@ -34,8 +33,6 @@ class Game extends React.Component {
       console.log("Already clicked, reset game");
       // reset everything
       this.setState( { score:0});
-      // this.setState({ allMemoryCards: allCards}); // clears all the 'visited' fields
-      // lodash .shuffle re-arranges array in random order
       // using 'allCards' sets back to original array
       let shuffledCards = _.shuffle(allCards);
       this.setState( { allMemoryCards: shuffledCards});

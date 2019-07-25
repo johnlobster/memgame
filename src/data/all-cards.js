@@ -6,6 +6,10 @@ import ribs from "../images/ribs.jpg";
 import salad from "../images/salad.jpg";
 import icecream from "../images/icecream.jpg";
 import burrito from "../images/burrito.jpg";
+import milkshake from "../images/milkshake.jpg";
+import orange from "../images/orange.jpg";
+import cheese from "../images/cheese.jpg";
+import avocado from "../images/avocado.jpg";
 
 // data for cards
 export default [
@@ -45,6 +49,23 @@ export default [
     id: 8,
     imageUrl: burrito,
     visited: false
-  }
+  },
+  {
+    id: 9,
+    imageUrl: avocado,
+    visited: false
+  }, {
+    id: 10,
+    imageUrl: milkshake,
+    visited: false
+  }, {
+    id: 11,
+    imageUrl: cheese,
+    visited: false
+  }, {
+    id: 12,
+    imageUrl: orange,
+    visited: false
+  },
 ]
 
