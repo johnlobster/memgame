@@ -1,10 +1,36 @@
 # memgame
+A memory  game, built using reactjs. User clicks on cards, that get re-shuffled by a click. If the user clicks on the same card twice then they lose. This is a front-end app.
 
+#### Technologies
 
+* react
+* github
+* javascript
+* html
+* css
+* create-react-app
+
+#### Deployed
+
+https://johnlobster.github.io/memgame/
+
+#### Github repository
+
+<https://github.com/johnlobster/memgame.git>
+
+#### Running locally
+
+clone the master repo, cd to memgame directory
+
+`npm install` will install all the node modules. This will take a while, as react uses nearly 1000 modules
+
+`npm start` will run the app, including opening a new browser tab 
 
 #### Setup
 
 run `create-react-app <name>` and cd to `<name>` directory
+
+As well as creating a dummy app/directory tree, `create-react-app` sets up a bundling flow so that the app can be built from a simple `npm build` command. All files are bundled together, post-processing flows run and the files are minified
 
 create github repository
 

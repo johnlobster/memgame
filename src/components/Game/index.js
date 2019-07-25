@@ -10,8 +10,8 @@ class Game extends React.Component {
   state = {
     score: 0,
     highScore: 0,
-    allMemoryCards: allCards
-    // shuffledMemoryCards: allCards
+    allMemoryCards: allCards,
+    info: ""
   }
 
   cardClick = (id) => {
@@ -72,7 +72,11 @@ class Game extends React.Component {
   render() {
     return (
       <div>
-        <Scoreboard score={this.state.score} highScore={this.state.highScore} />
+        <Scoreboard 
+          score={this.state.score} 
+          highScore={this.state.highScore}
+          info={this.state.info} 
+        />
         <div className="cardTable">
           {this.state.allMemoryCards.map( (card) => {
             return (

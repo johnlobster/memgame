@@ -1,4 +1,32 @@
 
+.titleBox {
+  width:100%;
+}
+
+.titleSpan {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 8vw;
+  letter-spacing: 0.2rem;
+}
+
+/* Title adds white space to the right to match the card layout */
+@media only screen and (min-width : 601px) {
+  .titleBox {
+    width: 85%;
+  }
+  .titleSpan {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width : 993px) {
+  .titleBox {
+    width: 60%;
+  }
+  .titleSpan {
+    font-size: 6vw;
+  }
+}
+
 .logo {
   animation: logo-spin infinite 20s linear;
   height: 2rem;

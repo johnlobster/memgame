@@ -6,11 +6,12 @@ class Title extends Component {
   render () {
 
     return (
-
-      <h1>
-        <span>Memory Game</span>
-        <img src={logo} alt="React logo" className="logo"></img>
-      </h1>
+      <div className="bg-primary titleBox">
+        <h1 className="text-white pl-5 pt-2 pb-3 mb-0" >
+          <span className="titleSpan pr-3">Memory Game</span>
+          <img src={logo} alt="React logo" className="logo"></img>
+        </h1>
+      </div>
     )
   }
 }

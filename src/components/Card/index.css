@@ -1,13 +1,56 @@
 
+
 .memoryCard {
-  background-color: lightgrey;
+  background-color: white;
+  overflow: hidden;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 15px;
 }
 
 .memoryCard:hover {
-  background-color: white;
+  animation-timing-function: linear;
+  animation-name: growBox;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
+
+
 .memoryCard img {
-  width:200px;
+  padding: 0.5rem;
+  width:90%;
+  border-radius: 15px;
 }
+
+/* memory card index used as debug aide, does not appear in production */
+
+.memoryCardIndex {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+/* animation */
+
+@keyframes growBox {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1.005); }
+  40% {
+    transform: scale(1.015); }
+  60% {
+    transform: scale(1.02); }
+  80% {
+    transform: scale(1.025); }
+  100% {
+    transform: scale(1.02); }
+  }
