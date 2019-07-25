@@ -1,0 +1,9 @@
+
+.memoryCard {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.memoryCard:hover {
+  background-color: white;
+}
