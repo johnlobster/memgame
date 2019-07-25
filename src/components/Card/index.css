@@ -7,3 +7,7 @@
 .memoryCard:hover {
   background-color: white;
 }
+
+.memoryCard img {
+  width:200px;
+}

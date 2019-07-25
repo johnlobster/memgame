@@ -4,7 +4,6 @@ import './index.css';
 
 class Title extends Component {
   render () {
-    console.log(logo);
 
     return (
 

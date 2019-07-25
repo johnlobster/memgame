@@ -5,6 +5,7 @@ import Card from "../Card";
 import allCards from "../../data/all-cards";
 import _ from "lodash";
 
+
 class Game extends React.Component {
   state = {
     score: 0,
@@ -77,7 +78,7 @@ class Game extends React.Component {
             return (
               <Card   
                 className="card" 
-                img={card.url} 
+                img={card.imageUrl} 
                 id={card.id} 
                 key={card.id}
                 cardClick={this.cardClick} 
