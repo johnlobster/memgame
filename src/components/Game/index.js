@@ -9,26 +9,47 @@ class Game extends React.Component {
   state = {
     score: 0,
     highScore: 0,
-    allMemoryCards: allCards,
-    shuffledMemoryCards: allCards
+    allMemoryCards: allCards
+    // shuffledMemoryCards: allCards
   }
 
   cardClick = (id) => {
+    // debug
     console.log("Clicked card " + id);
-    let card = this.state.allMemoryCards[id - 1];
-    if (card.id !== id) {
-      console.log("Something went wrong in Game.cardClick()");
-    }
-    else if (card.visited ) {
+    this.state.allMemoryCards.forEach( (card) => {
+      console.log("Card " + card.id + " visited " + card.visited);
+    });
+    // memory cards always appear in a random order, so have to run through them all
+    // to find out if this card was already visited
+    let thisCardVisited = false;
+    this.state.allMemoryCards.forEach((card) => {
+      if (card.id === id) {
+        if ( card.visited) {
+          thisCardVisited = true;
+        }
+      }
+    });
+    if (thisCardVisited ) {
       console.log("Already clicked, reset game");
       // reset everything
-      this.setState({ allMemoryCards: allCards}); // clears all the visited fields
-      let shuffledCards = _.shuffle(this.state.allMemoryCards); // reshuffle cards
-      this.setState( { shuffledMemoryCards: shuffledCards});
+      this.setState( { score:0});
+      // this.setState({ allMemoryCards: allCards}); // clears all the 'visited' fields
+      // lodash .shuffle re-arranges array in random order
+      // using 'allCards' sets back to original array
+      let shuffledCards = _.shuffle(allCards);
+      this.setState( { allMemoryCards: shuffledCards});
 
     } 
     else {
-      // have to create a new array, even if only changed one thing
+      // change score and set visited on the clicked cards
+      // increase score and check against highScore
+      let newScore = this.state.score + 1;
+      if (newScore > this.state.highScore) {
+        this.setState({ highScore: newScore});
+      }
+      this.setState({score: newScore});
+
+      // have to create a new array to change allMemoryCards, even if only changed one thing
       let newMemoryCards = this.state.allMemoryCards.map( (card) => {
         if (card.id === id) {
           return { 
@@ -41,18 +62,18 @@ class Game extends React.Component {
           return card;
         }
       });
-      this.setState({ allMemoryCards: newMemoryCards });
+      let shuffledMemoryCards = _.shuffle(newMemoryCards);
+      this.setState({ allMemoryCards: shuffledMemoryCards });
     }
     
   }
 
   render() {
-    // lodash shuffle arranges cards in a random order
     return (
       <div>
-        <Scoreboard />
+        <Scoreboard score={this.state.score} highScore={this.state.highScore} />
         <div className="cardTable">
-          {this.state.shuffledMemoryCards.map( (card) => {
+          {this.state.allMemoryCards.map( (card) => {
             return (
               <Card   
                 className="card" 
