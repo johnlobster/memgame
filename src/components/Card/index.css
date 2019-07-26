@@ -94,6 +94,7 @@
   animation-duration: 0.4s;
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  box-shadow:10px 10px 5px #888888;
 }
 
 
