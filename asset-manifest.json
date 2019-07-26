@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/memgame/static/css/main.740077a6.chunk.css",
-    "main.js": "/memgame/static/js/main.50d1f54d.chunk.js",
-    "main.js.map": "/memgame/static/js/main.50d1f54d.chunk.js.map",
+    "main.css": "/memgame/static/css/main.4fd96151.chunk.css",
+    "main.js": "/memgame/static/js/main.d22bd307.chunk.js",
+    "main.js.map": "/memgame/static/js/main.d22bd307.chunk.js.map",
     "runtime~main.js": "/memgame/static/js/runtime~main.f4243dc9.js",
     "runtime~main.js.map": "/memgame/static/js/runtime~main.f4243dc9.js.map",
-    "static/js/2.75e32b0c.chunk.js": "/memgame/static/js/2.75e32b0c.chunk.js",
-    "static/js/2.75e32b0c.chunk.js.map": "/memgame/static/js/2.75e32b0c.chunk.js.map",
+    "static/js/2.53f984c0.chunk.js": "/memgame/static/js/2.53f984c0.chunk.js",
+    "static/js/2.53f984c0.chunk.js.map": "/memgame/static/js/2.53f984c0.chunk.js.map",
     "index.html": "/memgame/index.html",
-    "precache-manifest.e9d527a69d71ef886246f50749c36146.js": "/memgame/precache-manifest.e9d527a69d71ef886246f50749c36146.js",
+    "precache-manifest.c13e6ac26dbb00f3d2e79219569fd35f.js": "/memgame/precache-manifest.c13e6ac26dbb00f3d2e79219569fd35f.js",
     "service-worker.js": "/memgame/service-worker.js",
-    "static/css/main.740077a6.chunk.css.map": "/memgame/static/css/main.740077a6.chunk.css.map",
+    "static/css/main.4fd96151.chunk.css.map": "/memgame/static/css/main.4fd96151.chunk.css.map",
     "static/media/banana.jpg": "/memgame/static/media/banana.54627a66.jpg",
     "static/media/broccoli.png": "/memgame/static/media/broccoli.cf340039.png",
     "static/media/burger.jpg": "/memgame/static/media/burger.f3f3e68b.jpg",
+    "static/media/burrito.jpg": "/memgame/static/media/burrito.73472964.jpg",
+    "static/media/cheese.jpg": "/memgame/static/media/cheese.90596619.jpg",
     "static/media/logo.svg": "/memgame/static/media/logo.5d5d9eef.svg",
-    "static/media/pizza.jpg": "/memgame/static/media/pizza.407aa0dc.jpg"
+    "static/media/milkshake.jpg": "/memgame/static/media/milkshake.ecc72e32.jpg",
+    "static/media/pizza.jpg": "/memgame/static/media/pizza.407aa0dc.jpg",
+    "static/media/ribs.jpg": "/memgame/static/media/ribs.ef1a689f.jpg",
+    "static/media/salad.jpg": "/memgame/static/media/salad.b8ec5b63.jpg"
   }
 }
