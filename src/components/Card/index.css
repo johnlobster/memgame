@@ -63,9 +63,9 @@
   background-color: white;
   border-radius: 15px;
   position: relative;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-content: center; */
+  align-content: center;
 }
 
 /* Style the back side */

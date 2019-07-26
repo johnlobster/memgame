@@ -16,13 +16,12 @@ class Game extends React.Component {
   }
 
   cardClick = (id) => {
-    // debug
-    console.log("Clicked card " + id);
     // may need to add something so user doesn't click on flipped cards
+    if (this.state.flip) {
+      return;
+    }
     // flip cards over after user clicks
     this.setState({flip:true});
-    this.state.allMemoryCards.forEach( (card) => {
-    });
     // memory cards always appear in a random order, so have to run through them all
     // to find out if this card was already visited
     let thisCardVisited = false;
@@ -34,7 +33,6 @@ class Game extends React.Component {
       }
     });
     if (thisCardVisited ) {
-      console.log("Already clicked, reset game");
       // reset everything
       this.setState( { score:0});
       // using 'allCards' sets back to original array
@@ -69,8 +67,7 @@ class Game extends React.Component {
       // wait before flipping card back
       setInterval( () => {
         this.setState({ flip: false });
-        console.log("Flip back");
-      }, 10000);
+      }, 1000);
     }
     
   }
