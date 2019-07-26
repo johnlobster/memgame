@@ -1,5 +1,5 @@
 # memgame
-A memory  game, built using reactjs. User clicks on cards, that get re-shuffled by a click. If the user clicks on the same card twice then they lose. This is a front-end app.
+A memory  game, built using reactjs. User clicks on cards, that then get re-shuffled. If the user clicks on the same card twice then they lose. This is a front-end app.
 
 #### Technologies
 
@@ -9,6 +9,7 @@ A memory  game, built using reactjs. User clicks on cards, that get re-shuffled 
 * html
 * css
 * create-react-app
+* lodash (_.shuffle() used for randomizing array of cards)
 
 #### Deployed
 
@@ -26,7 +27,25 @@ clone the master repo, cd to memgame directory
 
 `npm start` will run the app, including opening a new browser tab 
 
+#### Design notes
+
+Css grid was used to arrange the cards. Grid provides a fixed number of columns and rows, which is what I 
+wanted to lay out the cards. The columns are sized using `1fr` which divides the amount of space to get column widths. The row size of `1fr` makes the all the rows the height of the tallest element.
+
+The app is responsive to screen size. There are different numbers of columns at different screen sizes, and
+the cards shrink in size as the screen size gets smaller. At large screen sizes, the displayed part of the grid
+is shrunk, otherwise not all the cards appear on the screen at once.
+
+css animation was used to grow cards when hovered. Card flipping is controlled by a boolean state variable "flip" in the Game component. The onClick function for the card makes the Card module flip property true or false, which is then used to conditionally add the "flip" property to the card class.
+
 #### Setup
+
+The app structure was created using `create-react-app`, which sets up directory structure, seed files,
+`package.json` entries and webpack configuration, so that running and deploying is very easy. The `github-pages` app was installed, a few modifications made to the package.json and then the app could
+be deployed to a github page by typing `npm run deploy`
+
+There seems to be a "bug" in the flow, that environment variables are not passed into the react code. I wanted
+to add some conditional rendering based on NODE_ENV to help with debugging, but this was not possible.
 
 run `create-react-app <name>` and cd to `<name>` directory
 
