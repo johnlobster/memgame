@@ -9,11 +9,28 @@ class Card extends React.Component {
   render() {
     return (
       <div onClick ={this.clickFunction} className="memoryCard">
-        <img src={this.props.img}  alt="card"></img>
-        {process.env.NODE_ENV !== "production" ||
-          <div className="memoryCardIndex">
-            {this.props.id}
-          </div>}
+        <div className={this.props.flip ? (
+            "flipMe flippableInner"
+          ): (
+            "flippableInner"
+          )}>
+          <div className="cardBack">
+            Back
+          </div>
+          <div className="cardFront">
+            {/* <div className="cardImageBox"> */}
+              <img src={this.props.img} alt="card"></img>
+              {process.env.NODE_ENV !== "production" ||
+                <div className="memoryCardIndex">
+                  {this.props.id}
+                </div>}
+            {/* </div> */}
+            
+          </div>
+          
+          
+        </div>
+        
       </div>
       
     )

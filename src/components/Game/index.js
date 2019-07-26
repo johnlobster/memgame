@@ -11,12 +11,16 @@ class Game extends React.Component {
     score: 0,
     highScore: 0,
     allMemoryCards: allCards,
-    info: ""
+    info: "",
+    flip: false
   }
 
   cardClick = (id) => {
     // debug
     console.log("Clicked card " + id);
+    // may need to add something so user doesn't click on flipped cards
+    // flip cards over after user clicks
+    this.setState({flip:true});
     this.state.allMemoryCards.forEach( (card) => {
     });
     // memory cards always appear in a random order, so have to run through them all
@@ -62,6 +66,11 @@ class Game extends React.Component {
       });
       let shuffledMemoryCards = _.shuffle(newMemoryCards);
       this.setState({ allMemoryCards: shuffledMemoryCards });
+      // wait before flipping card back
+      setInterval( () => {
+        this.setState({ flip: false });
+        console.log("Flip back");
+      }, 10000);
     }
     
   }
@@ -82,7 +91,8 @@ class Game extends React.Component {
                 img={card.imageUrl} 
                 id={card.id} 
                 key={card.id}
-                cardClick={this.cardClick} 
+                cardClick={this.cardClick}
+                flip={this.state.flip} 
               />
             );
 
