@@ -67,7 +67,7 @@ class Game extends React.Component {
       // wait before flipping card back
       setInterval( () => {
         this.setState({ flip: false });
-      }, 1000);
+      }, 1200);
     }
     
   }

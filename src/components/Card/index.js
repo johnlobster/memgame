@@ -15,7 +15,6 @@ class Card extends React.Component {
             "flippableInner"
           )}>
           <div className="cardBack">
-            Back
           </div>
           <div className="cardFront">
             {/* <div className="cardImageBox"> */}
