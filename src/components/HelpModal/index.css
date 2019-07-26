@@ -1,0 +1,9 @@
+
+.helpModalButton {
+  background-color: #fabf15; /* a lightish orange */
+  color: black;
+}
+
+.helpModalButton:hover {
+  transform: scale(1.1);
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import './index.css';
 
 // copied from reactstrap documentation
 
@@ -20,8 +21,8 @@ class HelpModal extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Button color="danger" onClick={this.toggle}>Help</Button>
+      <span>
+        <button className="btn helpModalButton" onClick={this.toggle}>Help</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Memory Game help</ModalHeader>
           <ModalBody>
@@ -39,7 +40,7 @@ class HelpModal extends React.Component {
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
-      </div>
+      </span>
     );
   }
 }

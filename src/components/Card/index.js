@@ -20,14 +20,7 @@ class Card extends React.Component {
             <img src={logo} alt="React logo" className="cardBackLogo"></img>
           </div>
           <div className="cardFront">
-            {/* <div className="cardImageBox"> */}
-              <img src={this.props.img} alt="card"></img>
-              {process.env.NODE_ENV !== "production" ||
-                <div className="memoryCardIndex">
-                  {this.props.id}
-                </div>}
-            {/* </div> */}
-            
+              <img src={this.props.img} alt="card"></img>            
           </div>
           
           
@@ -41,3 +34,12 @@ class Card extends React.Component {
 
 export default Card;
 
+// this code was supposed to go after the cardFront image, but for some reason
+// react wasn't picking NODE_ENV
+// The memoryCardIndex was nopt rendered during npm run start, but was on the github deployed version
+// {
+//   process.env.NODE_ENV !== "production" ||
+//   <div className="memoryCardIndex">
+//     {this.props.id}
+//   </div>
+// }

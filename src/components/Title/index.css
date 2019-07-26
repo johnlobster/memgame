@@ -3,6 +3,12 @@
   width:100%;
 }
 
+.tBoxTitle {
+  display:flex;
+  justify-content: space-between;
+  align-items: center
+}
+
 .titleSpan {
   font-family: 'Luckiest Guy', cursive;
   font-size: 8vw;
