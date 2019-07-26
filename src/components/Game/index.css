@@ -6,7 +6,9 @@
   /*  grid setup, mobile first so only 1 column */
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+
   grid-gap: 1rem;
   grid-auto-rows: 0.8fr;
 }
