@@ -74,9 +74,19 @@
   color: white;
   border-radius: 15px;
   transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-
+/* logo is placed on back of card */
+.cardBackLogo {
+  animation: logo-spin infinite 5s linear;
+  height: 60%;
+  pointer-events: none;
+  position:absolute;
+  top: 18%;
+}
 
 .memoryCard:hover {
   animation-timing-function: linear;

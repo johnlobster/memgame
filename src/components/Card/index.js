@@ -1,5 +1,7 @@
 import React from 'react';
 import './index.css';
+import logo from '../../logo.svg';
+
 
 class Card extends React.Component {
 
@@ -15,6 +17,7 @@ class Card extends React.Component {
             "flippableInner"
           )}>
           <div className="cardBack">
+            <img src={logo} alt="React logo" className="cardBackLogo"></img>
           </div>
           <div className="cardFront">
             {/* <div className="cardImageBox"> */}
